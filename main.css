@@ -1,0 +1,133 @@
+@font-face {
+    font-family: Nohemi;
+    src: url("./assets/fonts/Nohemi-VF.ttf");
+}
+
+*{
+    margin: 0;
+    font-family: Nohemi;
+    font-weight: 400;
+    box-sizing: border-box;
+}
+
+/*Scrollbars*/
+::-webkit-scrollbar{
+    display: fixed;
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: rgba(0,0,0,1);
+}
+::-webkit-scrollbar-thumb {
+    background: #5e5e5e;
+}
+
+/*specific highlights*/
+.black-bg-highlight{
+    background-color: black;
+    color: white;
+    padding:0.3%;
+}
+
+
+/*Start of page specific styles*/
+
+/*Intro*/
+#intro{
+    padding: 10%;
+    display: flex;   
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 75vh;
+    background-color: black;
+    color: white;
+}
+
+#intro h1{
+    font-size: 13vmin;
+    font-weight: 600;
+}
+#intro h2{
+    font-size: 8vmin;
+    font-weight: 300;
+}
+
+
+#intro #bottom_right{
+    text-align: right;
+    align-self: flex-end;
+}
+
+@media (min-width:600px) {
+    #intro{
+       height: 100vh;
+    }
+    #intro h1{
+        font-size: 10vmin;
+    }
+    #intro h2{
+        font-size:5vmin;
+    }
+}
+
+
+/*About*/
+
+
+#about{
+    padding: 5%;
+    color: black;
+    background-color: white;
+    padding-top: 10%;
+    height: 100vh;
+}
+
+#about h1{
+    font-size: xxx-large;
+    font-weight: 200;
+    text-align: center;
+}
+#about #profile #pfp{
+    padding: 5%;
+    margin: auto;
+    text-align: center;
+}
+#about #pfp img{
+    width: auto;
+    height: 50vmin;
+    aspect-ratio: 1/1;
+    filter: saturate(0.2) contrast(0.75);
+}
+#about #pfp h2{
+    font-weight: 200;
+}
+#about #self_description{
+    width: 75%;
+    margin: auto;
+}
+#self_description p{
+    font-weight: 200 ;
+    font-size: larger;
+    line-height: 1.5;
+    text-align: justify;
+}
+#self_description p span#bigger{
+    font-size: xx-large;
+}
+
+@media (min-width:600px) {
+    #about{
+        padding: 5%;
+    }
+    
+    #about h1{
+        text-align: left;
+    }
+    #profile{
+        display: flex;
+    }
+    #profile #self_description{
+        width: 50%;
+        margin: auto;
+    }
+}

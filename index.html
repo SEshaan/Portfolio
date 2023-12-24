@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+    <title>Eshaan | Portfolio</title>
+</head>
+<body>
+    <div id="intro">
+        <div id="top_left">
+            <h2>Hello there, I'm</h2><br>
+            <h1>Eshaan</h1><br>
+            <h2 style="font-weight: 200;">a <span id="desig">Student</span></h2><br><br>
+        </div>
+        <div id="bottom_right">
+            <h2>And this is,</h2><br>
+            <h2>My</h2><br>
+            <h1>Portfolio</h1>
+        </div>
+    </div>
+    <div id="about">
+        <h1>About Me</h1><br>
+        <div id="profile">
+            <div id="pfp">
+                <img src="./assets/images/pfp.jpg" alt=""><br><br>
+                <h2>Eshaan</h2>
+            </div>
+            <div id="self_description">
+                <p>
+                    <span id="bigger">Well,</span><br> I'm <span class="black-bg-highlight">Eshaan</span>, a coding enthusiast who's been captivated by computers since the <span class="black-bg-highlight">age of three</span>. My fascination with technology has been a lifelong journey driven by the thrill of discovery and problem-solving. I've worked on <span class="black-bg-highlight">various projects</span>, constantly seeking new challenges and breakthroughs. My passion for coding <span class="black-bg-highlight">isn't just about creating</span>; it's about understanding the intricate mechanics behind the digital world. 
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    "use-strict"
+    // animate the title
+    function fumble(target,final,time,prog){
+        bifurc = final.substr(0,Math.round(final.length*prog)) + ((final.length > Math.round(final.length*prog)) ? "".repeat(final.length - Math.round(final.length*prog)) : " ")
+        document.getElementById(target).innerText = bifurc
+        if (prog >= 1){return}
+        setTimeout(() => {fumble(target,final,time,(prog += 0.1))},time*0.1)
+    }
+    titles = ["Student","Self-Learner","Coder","Programmer","Designer"]
+    state = 0
+    setInterval(() => {state = (state + 1) % titles.length; fumble("desig",titles[state],500,0)},2000)
+</script>
+
+</html>
