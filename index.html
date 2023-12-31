@@ -2,15 +2,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/images/logoa.ico" type="image/x-icon">
     <link rel="stylesheet" href="./main.css">
     <title>Eshaan | Portfolio</title>
 </head>
 <body>
     <div id="intro">
         <div id="top_left">
-            <h2>Hello there, I'm</h2><br>
+            <h2>I'm</h2><br>
             <h1>Eshaan</h1><br>
-            <h2 style="font-weight: 200;">a <span id="desig">Student</span></h2><br><br>
+            <h2 style="font-weight: 200;">a <span id="desig">UI/UX Designer</span></h2>
+            <h2 style="font-weight: 200;">a <span id="desig">Web Designer</span></h2><br>
         </div>
         <div id="bottom_right">
             <h2>And this is,</h2><br>
@@ -19,11 +21,11 @@
         </div>
     </div>
     <div id="about">
-        <h1>About Me</h1><br>
+        <h1 id="A1" class="">About Me</h1><br>
         <div id="profile">
             <div id="pfp">
                 <img src="./assets/images/pfp.jpg" alt=""><br><br>
-                <h2>Eshaan</h2>
+                <h2 id="A2">Eshaan</h2>
             </div>
             <div id="self_description">
                 <p>
@@ -32,20 +34,31 @@
             </div>
         </div>
     </div>
+    <div id="projects">
+        <h1 id="title">Projects</h1><br><br>
+        <div id="links">
+            <div class="link blue" onclick="document.location.href='https:////dpshmun.vercel.app';">
+                <h1>DPSHMUN →</h1> 
+            </div>
+            <!-- <div class="link green">
+                <h1>Email Trackers →</h1>
+            </div>
+            <div class="link red">
+                <h1>Experiments →</h1>
+            </div> -->
+        </div>
+    </div>
+    
+    <!-- <div id="journey">
+        <h1 id="title" >My Journey</h1><br><br><br>
+        <div id="container">
+            
+        </div>
+    </div> -->
+    <div id="footer">
+        
+    </div>
 </body>
 
-<script>
-    "use-strict"
-    // animate the title
-    function fumble(target,final,time,prog){
-        bifurc = final.substr(0,Math.round(final.length*prog)) + ((final.length > Math.round(final.length*prog)) ? "".repeat(final.length - Math.round(final.length*prog)) : " ")
-        document.getElementById(target).innerText = bifurc
-        if (prog >= 1){return}
-        setTimeout(() => {fumble(target,final,time,(prog += 0.1))},time*0.1)
-    }
-    titles = ["Student","Self-Learner","Coder","Programmer","Designer"]
-    state = 0
-    setInterval(() => {state = (state + 1) % titles.length; fumble("desig",titles[state],500,0)},2000)
-</script>
 
 </html>

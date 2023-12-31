@@ -30,7 +30,18 @@
 }
 
 
+
 /*Start of page specific styles*/
+
+#title{
+    padding: 0 0 0 5%;
+}
+
+@media (max-width:600px){
+    #title{
+        padding:0;
+    }
+}
 
 /*Intro*/
 #intro{
@@ -38,7 +49,8 @@
     display: flex;   
     flex-direction: column;
     justify-content: space-between;
-    min-height: 75vh;
+    box-sizing: border-box;
+    min-height: 100vh;
     background-color: black;
     color: white;
 }
@@ -79,7 +91,7 @@
     color: black;
     background-color: white;
     padding-top: 10%;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 #about h1{
@@ -130,4 +142,86 @@
         width: 50%;
         margin: auto;
     }
+}
+
+/*Projects*/
+#projects{
+    padding: 10% 0 5% 0;
+    background-color: black;
+    color: white;
+    padding-top: 10%;
+}
+
+#projects h1{
+    font-size: xxx-large;
+    font-weight: 200;
+    text-align: center;
+}
+
+.link{
+    min-height: 15vh;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    cursor: pointer;
+}
+
+.link h1{
+    padding: 2.5%;
+    transition: 0.25s ease-out;
+    font-weight: 100 !important;
+}
+.link:hover{
+    transition: 0.25s ease-in-out;
+}
+.link:hover h1{
+    font-weight: 300 !important;
+}
+
+.blue{
+    background-color: #3f4f5f;
+    color: #d1ab72;
+}
+
+.blue:hover{
+    background-color: #bf975b;
+    color: #3f4f5f;
+}
+
+.red{
+    background-color: #071227;
+    color: #90CDC3;    
+}
+
+.red:hover{
+    color: #071227;
+    background-color: #90CDC3;   
+}
+
+.green{
+    color: #F5FF90;
+    background-color: #243E36;
+}
+
+.green:hover{
+    background-color: #F5FF90;
+    color: #243E36;
+}
+
+@media (min-width:600px) {
+    #projects{
+        padding: 5% 0 5% 0;
+    }
+    
+    #projects h1{
+        text-align: left;
+    }
+}
+
+#footer{
+    background-color: black;
+    color:white;
+    margin: 0;
+    box-sizing: border-box;
+
 }
