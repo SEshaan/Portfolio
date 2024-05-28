@@ -2,63 +2,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./assets/images/logoa.ico" type="image/x-icon">
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
+    <link rel="shortcut icon" href="./assets/images/favicon.ico">
     <link rel="stylesheet" href="./main.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css" rel="stylesheet">
     <title>Eshaan | Portfolio</title>
 </head>
-<body>
-    <div id="intro">
-        <div id="top_left">
-            <h2>I'm</h2><br>
-            <h1>Eshaan</h1><br>
-            <h2 style="font-weight: 200;">a <span id="desig">UI/UX Designer</span></h2>
-            <h2 style="font-weight: 200;">a <span id="desig">Web Designer</span></h2><br>
-        </div>
-        <div id="bottom_right">
-            <h2>And this is,</h2><br>
-            <h2>My</h2><br>
-            <h1>Portfolio</h1>
-        </div>
-    </div>
-    <div id="about">
-        <h1 id="A1" class="">About Me</h1><br>
-        <div id="profile">
-            <div id="pfp">
-                <img src="./assets/images/pfp.jpg" alt=""><br><br>
-                <h2 id="A2">Eshaan</h2>
+<body data-scroll-speed="1" data-scroll-container data-scroll-section>
+    <div id="intro" data-scroll-section  data-scroll-speed="2" data-scroll>
+            <div id="top_left">
+                <h2 data-scroll>I'm</h2><br>
+                <h1 style="color: #D2b68A;" data-scroll>Eshaan</h1><br>
+                <h2 style="font-weight: 200;">a <span id="desig" data-scroll>UI/UX Designer</span></h2>
+                <h2 style="font-weight: 200;">a <span id="desig" data-scroll>Web Designer</span></h2><br>
             </div>
-            <div id="self_description">
+    </div>
+    <div id="about" data-scroll-section>
+        <h1 id="A1" class="" data-scroll data-scroll-speed="1" data-scroll-direction="horizontal">About Me</h1><br>
+        <div id="profile">
+            <div id="pfp" >
+                <img src="./assets/images/pfp.jpg" alt="" data-scroll-direction="horizontal" data-scroll data-scroll-speed="0.25"><br><br>
+                <!-- <h2 id="A2">Eshaan</h2> -->
+            </div>
+            <div id="self_description" data-scroll="" data-scroll-speed="-1" data-scroll-direction="horizontal">
                 <p>
-                    <span id="bigger">Well,</span><br> I'm <span class="black-bg-highlight">Eshaan</span>, a coding enthusiast who's been captivated by computers since the <span class="black-bg-highlight">age of three</span>. My fascination with technology has been a lifelong journey driven by the thrill of discovery and problem-solving. I've worked on <span class="black-bg-highlight">various projects</span>, constantly seeking new challenges and breakthroughs. My passion for coding <span class="black-bg-highlight">isn't just about creating</span>; it's about understanding the intricate mechanics behind the digital world. 
+                    <br> I'm <span class="black-bg-highlight">Eshaan</span>, a coding enthusiast who's been captivated by computers since the <span class="black-bg-highlight">age of three</span>. My fascination with technology has been a lifelong journey driven by the thrill of discovery and problem-solving. I've worked on <span class="black-bg-highlight">various projects</span>, constantly seeking new challenges and breakthroughs. My passion for coding <span class="black-bg-highlight">isn't just about creating</span>; it's about understanding the intricate mechanics behind the digital world. 
                 </p>
             </div>
         </div>
     </div>
-    <div id="projects">
-        <h1 id="title">Projects</h1><br><br>
-        <div id="links">
-            <div class="link blue" onclick="document.location.href='https:////dpshmun.vercel.app';">
-                <h1>DPSHMUN →</h1> 
+    <div id="projects" data-scroll-section style="overflow-y: hidden;">
+        <h1 id="title" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-0.5">Projects</h1><br><br>
+        <div id="mun" data-scroll-speed="0" data-scroll style="overflow-y: hidden;">
+            <div>
+                <h2 >DPSH MUN</h2><br>
+            <p>
+                The DPSH MUN was an intra school MUN conducted at DPSH, to update the participating students with the latest updates and provide them with important resources, the DPSH MUN website was hosted.
+            </p>
+            </div><br><br>
+            <div id="scroller" data-scroll data-scroll-speed="0">
+                <img class="scroll_img" src="assets/images/showcase/mun/allocations page.png" alt="" data-scroll="" data-scroll-speed="4">
+                <img class="scroll_img" src="assets/images/showcase/mun/home page.png" alt="" data-scroll="" data-scroll-direction="horizontal" data-scroll-speed="3"> 
+            <!-- </div><br><br>
+            <div id="scroller" data-scroll data-scroll-speed="0"> -->
+                <img class="scroll_img" src="assets/images/showcase/mun/secretariat page.png" alt="" data-scroll="" data-scroll-direction="horizontal" data-scroll-speed="-3">
+                <img class="scroll_img" src="assets/images/showcase/mun/disec page.png" alt="" data-scroll="" data-scroll-direction="" data-scroll-speed="4">
             </div>
-            <!-- <div class="link green">
-                <h1>Email Trackers →</h1>
-            </div>
-            <div class="link red">
-                <h1>Experiments →</h1>
-            </div> -->
         </div>
     </div>
     
-    <!-- <div id="journey">
-        <h1 id="title" >My Journey</h1><br><br><br>
-        <div id="container">
+    
+    <div id="footer" data-scroll-section>
+        <div data-scroll="" data-scroll-direction="horizontal" data-scroll-speed="-1">
+            <img src="./assets/images/logo.png" alt="" id="logo">
+            <h2>Eshaan Sistla</h2>
+        </div>
+                    <div id="contact_blocks" data-scroll data-scroll-speed="-1" data-scroll-direction="horizontal">
+                        <div class="block">
+                            <img src="./assets/images/icons/envelope-solid.svg" alt="">
+                            <h3>eshaansistla.es@gmail.com</h3>
+                        </div>
+                        <!-- <div class="block">
+                            <img src="./assets/images/icons/square-instagram.svg" alt="">
+                            <h3>s_eshaan_</h3>
+                        </div> -->
+                    </div>
+        <div>
             
         </div>
-    </div> -->
-    <div id="footer">
-        
     </div>
 </body>
 
-
+<script src="./script.js"></script>
 </html>

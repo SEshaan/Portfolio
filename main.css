@@ -1,17 +1,17 @@
-@font-face {
-    font-family: Nohemi;
-    src: url("./assets/fonts/Nohemi-VF.ttf");
-}
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 *{
     margin: 0;
-    font-family: Nohemi;
-    font-weight: 400;
+    font-family: "Urbanist";
+    font-weight: 500;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 /*Scrollbars*/
-::-webkit-scrollbar{
+/* ::-webkit-scrollbar{
     display: fixed;
     width: 10px;
 }
@@ -20,12 +20,12 @@
 }
 ::-webkit-scrollbar-thumb {
     background: #5e5e5e;
-}
+} */
 
 /*specific highlights*/
 .black-bg-highlight{
     background-color: black;
-    color: white;
+    color: #E8E4E0;
     padding:0.3%;
 }
 
@@ -43,18 +43,23 @@
     }
 }
 
-/*Intro*/
-#intro{
-    padding: 10%;
-    display: flex;   
-    flex-direction: column;
-    justify-content: space-between;
-    box-sizing: border-box;
-    min-height: 100vh;
+body{
     background-color: black;
-    color: white;
 }
 
+/*Intro*/
+#intro{
+    box-sizing: border-box;
+    min-height: 100vh; 
+    background-size: cover;
+    color: #E8E4E0;
+    background-color: black;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10%;
+}
 #intro h1{
     font-size: 13vmin;
     font-weight: 600;
@@ -64,10 +69,8 @@
     font-weight: 300;
 }
 
-
-#intro #bottom_right{
-    text-align: right;
-    align-self: flex-end;
+#intro #top_left{
+    overflow: visible;
 }
 
 @media (min-width:600px) {
@@ -89,14 +92,14 @@
 #about{
     padding: 5%;
     color: black;
-    background-color: white;
+    background-color: #E8E4E0;
     padding-top: 10%;
     min-height: 100vh;
 }
 
 #about h1{
     font-size: xxx-large;
-    font-weight: 200;
+    font-weight: 500;
     text-align: center;
 }
 #about #profile #pfp{
@@ -148,65 +151,76 @@
 #projects{
     padding: 10% 0 5% 0;
     background-color: black;
-    color: white;
+    color: #E8E4E0;
     padding-top: 10%;
 }
 
 #projects h1{
     font-size: xxx-large;
-    font-weight: 200;
+    font-weight: 500;
     text-align: center;
 }
-
-.link{
-    min-height: 15vh;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    cursor: pointer;
+#projects h2{
+    font-size: xx-large;
+    font-weight: 300;
+    text-align: left;
 }
 
-.link h1{
-    padding: 2.5%;
-    transition: 0.25s ease-out;
-    font-weight: 100 !important;
-}
-.link:hover{
-    transition: 0.25s ease-in-out;
-}
-.link:hover h1{
-    font-weight: 300 !important;
+#mun{
+
 }
 
-.blue{
-    background-color: #3f4f5f;
-    color: #d1ab72;
+#mun h2{
+    text-align: center;
+}
+#mun p{
+    width: 75%;
+    margin: auto;
+    text-align: justify;
 }
 
-.blue:hover{
-    background-color: #bf975b;
-    color: #3f4f5f;
+/* .scroll_img{
+    width: 35vw;
+    height: auto;
+    object-fit:cover;
+    object-position: 0 0 ;
+    margin: 0 7.5vw 0 7.5vw;
+    box-sizing: content-box;
 }
 
-.red{
-    background-color: #071227;
-    color: #90CDC3;    
+#scroller{
+    width: 100vw;
+    box-sizing: border-box;
+    min-height: 120%;
+    display: grid;
+    overflow-x:hidden;
+    grid-template-columns: auto auto;
+    row-gap:10%;
+    overflow-y: hidden;
+} */
+
+.scroll_img{
+    width: 80vw;
+    height: auto;
+    object-fit:cover;
+    aspect-ratio: 9/16;
+    object-position: 0 0 ;
+    margin: 0 7.5vw 0 7.5vw;
+    box-sizing: content-box;
 }
 
-.red:hover{
-    color: #071227;
-    background-color: #90CDC3;   
+#scroller{
+    width: 100vw;
+    box-sizing: border-box;
+    min-height: 120%;
+    display: grid;
+    overflow-x:hidden;
+    grid-template-columns: auto;
+    row-gap:10%;
+    overflow-y: hidden;
 }
 
-.green{
-    color: #F5FF90;
-    background-color: #243E36;
-}
 
-.green:hover{
-    background-color: #F5FF90;
-    color: #243E36;
-}
 
 @media (min-width:600px) {
     #projects{
@@ -216,12 +230,69 @@
     #projects h1{
         text-align: left;
     }
+
+    #mun h2{
+        text-align: left;
+        margin: 0 0 0 7.5% ;
+    }
+
+    #mun p{
+        width: 50%;
+        margin: 0 0 0 12.5%;
+    }
+    .scroll_img{
+        width: 35vw;
+        /* aspect-ratio: auto; */
+    }
+    #scroller{
+        grid-template-columns: auto auto;
+    }
 }
 
 #footer{
-    background-color: black;
-    color:white;
+    background-color:#D2b68A;
+    background-color:#E8E4E0;
+    /* color:#E8E4E0; */
+    color: black;
     margin: 0;
     box-sizing: border-box;
+    padding: 2% 5% 1% 5%;
+    min-height: 10vh;
+    overflow-y: hidden;
+}
 
+#footer #logo{
+    width: 10vmin;
+    height: auto;
+    aspect-ratio: 1/1;
+    filter: invert();
+}
+
+
+#contact_blocks{
+    width: 50%;
+    /* background-color: rgba(0, 0, 0, 0.205); */
+    padding: 2.5%;
+    box-sizing: border-box;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+.block{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: row;
+    margin-left: 5%;
+    font-size: small;
+}
+.block img{
+    width: 10%;
+    margin: 0 5% 0 5%;
+}
+
+@media (max-width:600px){
+    #contact_blocks{
+        width: 100%;
+    }
 }
