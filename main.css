@@ -179,6 +179,38 @@ body{
     text-align: justify;
 }
 
+/*Editorial */
+#editorial{
+    padding: 10% 0 5% 0;
+    background-color: #E8E4E0;
+    color: #000;
+    padding-top: 10%;
+}
+
+#editorial h1{
+    font-size: xxx-large;
+    font-weight: 500;
+    text-align: center;
+}
+#editorial h2{
+    font-size: xx-large;
+    font-weight: 300;
+    text-align: left;
+}
+
+#loq{
+
+}
+
+#loq h2{
+    text-align: center;
+}
+#loq p{
+    width: 75%;
+    margin: auto;
+    text-align: justify;
+}
+
 /* .scroll_img{
     width: 35vw;
     height: auto;
@@ -207,6 +239,10 @@ body{
     object-position: 0 0 ;
     margin: 0 7.5vw 0 7.5vw;
     box-sizing: content-box;
+}
+
+.scroll_img.loq{
+    aspect-ratio: 1414/2000;
 }
 
 #scroller{
@@ -246,6 +282,24 @@ body{
     }
     #scroller{
         grid-template-columns: auto auto;
+    }
+
+    #editorial{
+        padding: 5% 0 5% 0;
+    }
+    
+    #editorial h1{
+        text-align: left;
+    }
+
+    #loq h2{
+        text-align: left;
+        margin: 0 0 0 7.5% ;
+    }
+
+    #loq p{
+        width: 50%;
+        margin: 0 0 0 12.5%;
     }
 }
 
