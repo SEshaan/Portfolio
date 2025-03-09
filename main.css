@@ -313,6 +313,7 @@ body{
     padding: 2% 5% 1% 5%;
     min-height: 10vh;
     overflow-y: hidden;
+    border-top: black 4px solid;
 }
 
 #footer #logo{
@@ -349,4 +350,26 @@ body{
     #contact_blocks{
         width: 100%;
     }
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.social-link img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.social-link h4 {
+    margin: 0;
+    font-size: medium;
+}
+
+.social-link a {
+    color: inherit;
+    text-decoration: none;
 }
